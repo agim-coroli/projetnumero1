@@ -181,7 +181,6 @@
   }
 
   /* SecondNavbar */
-
   .secondNavbar__alphabetList {
     display: flex;
     justify-content: center;
@@ -244,35 +243,58 @@
     flex-grow: 0.97;
   }
 
-/* revenir plus tard pour terminer  */
+  /* revenir plus tard pour terminer  */
 
-/*  .slide {
+ 
+
+  .slide{
+    position: absolute;
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
+    top: 20%;
+    left: 40%;
   }
 
-  .aaa{
-    position: absolute;
-    color: green;
-    z-index: 1; 
-  }
-
-  .slide:first-child,.slide:target {
+  .slide:first-child{
     display: block;
   }
 
-  .slideshow a:nth-child(2):after {
-    content: '';
-    right: 10px;
-    transform: rotate(45deg);
-  } */
+  .slide:target{
+    display: block;
+  }
 
+  .slide>a:first-child{
+    position: absolute;
+    z-index: 1;
+    height: 99%;
+    width: 50%;
+    border: 1px solid red;
+  }
+  .slide>a:last-of-type{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    height: 99%;
+    width: 50%;
+    border: 1px solid rgb(38, 0, 255);
+    initial-value: "";
+  }
 
+  .slide-1:target,
+  .slide-2:target,
+  .slide-3:target,
+  .slide-4:target,
+  .slide-5:target,
+  .slide-6:target,
+  .slide-7:target{
+    display: block;
+  }
+
+  .pagination{
+    position: absolute;
+    top: 75%;
+    font-size: 2rem;
+    left: 48%;
+  }
 
 
 
