@@ -1,67 +1,103 @@
-
 /* base : fondation de base du site/programme, config globale,  */
 @layer base, layout, component;
+
 @layer base {
+
   /* Définir 1rem à 10px */
   html {
-    font-size: 62.5%; /* 62.5% de 16px = 10px */
+    font-size: 62.5%;
+    /* 62.5% de 16px = 10px */
   }
+
   /* 1. Réinitialisation des marges et des espacements */
   *,
   *::before,
   *::after {
-    margin: 0; /* Supprime les marges par défaut */
-    padding: 0; /* Supprime les espacements par défaut */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions de l'élément */
+    margin: 0;
+    /* Supprime les marges par défaut */
+    padding: 0;
+    /* Supprime les espacements par défaut */
+    box-sizing: border-box;
+    /* Inclut le padding et la bordure dans les dimensions de l'élément */
   }
+
   /* 2. Définition des styles de base */
   body {
-    font-family: Arial, sans-serif; /* Police par défaut */
-    background-color: #00000088; /* Couleur de fond par défaut */
-    color: #333; /* Couleur du texte par défaut */
-    line-height: 1.5; /* Interligne par défaut pour le texte */
+    font-family: Arial, sans-serif;
+    /* Police par défaut */
+    background-color: #00000088;
+    /* Couleur de fond par défaut */
+    color: #333;
+    /* Couleur du texte par défaut */
+    line-height: 1.5;
+    /* Interligne par défaut pour le texte */
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   /* 3. Réinitialisation des titres */
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0; /* Supprime les marges par défaut des titres */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    /* Supprime les marges par défaut des titres */
   }
+
   /* 4. Réinitialisation des listes */
-  ul, ol {
-    list-style: none; /* Supprime les puces et les numéros */
+  ul,
+  ol {
+    list-style: none;
+    /* Supprime les puces et les numéros */
   }
+
   /* 5. Réinitialisation des liens */
   a {
-    text-decoration: none; /* Supprime le soulignement par défaut des liens */
-    color: inherit; /* Hérite de la couleur du texte */
+    text-decoration: none;
+    /* Supprime le soulignement par défaut des liens */
+    color: inherit;
+    /* Hérite de la couleur du texte */
   }
+
   /* 6. Réinitialisation des images */
   img {
-    max-width: 100%; /* Rendre les images réactives */
-    height: auto; /* Maintenir les proportions des images */
+    max-width: 100%;
+    /* Rendre les images réactives */
+    height: auto;
+    /* Maintenir les proportions des images */
   }
+
   /* 7. Réinitialisation des tableaux */
   table {
-    border-collapse: collapse; /* Supprime les espaces entre les cellules */
-    width: 100%; /* Rendre les tables réactives */
+    border-collapse: collapse;
+    /* Supprime les espaces entre les cellules */
+    width: 100%;
+    /* Rendre les tables réactives */
   }
+
   /* 8. Réinitialisation des boutons */
   button {
-    background: none; /* Supprime les styles par défaut des boutons */
-    border: none; /* Supprime les bordures par défaut des boutons */
-    cursor: pointer; /* Change le curseur au survol */
+    background: none;
+    /* Supprime les styles par défaut des boutons */
+    border: none;
+    /* Supprime les bordures par défaut des boutons */
+    cursor: pointer;
+    /* Change le curseur au survol */
   }
 }
 
 /* layout : disposition des composants sur la page, grid, flexbox, mise en page */
 @layer layout {
+
   /* navbar  */
   .navbar {
     color: white;
     border-bottom: 1px solid black;
   }
+
   /* unOrdoned list + element list */
   .navbar__list {
     margin: 0.1rem 1.5rem;
@@ -72,18 +108,22 @@
     gap: 15rem;
     line-height: 1rem;
   }
+
   .navbar__logo {
     width: 7rem;
     filter: brightness(0);
   }
-  .navbar__link{
+
+  .navbar__link {
     font-weight: bolder;
     padding: 0.8rem;
   }
-  .navbar__link:hover{
+
+  .navbar__link:hover {
     color: rgba(255, 255, 255, 0.444);
     cursor: pointer;
   }
+
   .navbar__search {
     line-height: 5rem;
     flex-grow: 1;
@@ -91,27 +131,32 @@
     align-items: center;
     justify-content: flex-end;
   }
-  .navbar__search-input{
+
+  .navbar__search-input {
     height: 2.5rem;
     margin: 0 1rem;
   }
-  .navbar__search-icon{
+
+  .navbar__search-icon {
     color: black;
   }
 
   /* dropdown menu button  */
-  .navbar__dropdown{
+  .navbar__dropdown {
     position: relative;
   }
-  .navbar__dropdown-title{
+
+  .navbar__dropdown-title {
     font-weight: bolder;
     padding: 0.6rem;
   }
-  .navbar__dropdown-title:hover{
+
+  .navbar__dropdown-title:hover {
     color: rgba(255, 255, 255, 0.444);
     cursor: pointer;
   }
-  .navbar__dropdown-list{
+
+  .navbar__dropdown-list {
     padding: 0.6rem;
     background-color: rgba(0, 0, 0, 0.91);
     position: absolute;
@@ -122,19 +167,22 @@
     cursor: pointer;
     z-index: 10;
   }
-  .navbar__dropdown-item{
+
+  .navbar__dropdown-item {
     line-height: 2;
   }
-  .navbar__dropdown-item:hover{
+
+  .navbar__dropdown-item:hover {
     background-color: rgba(255, 11, 11, 0.537);
   }
-  .navbar__dropdown:hover .navbar__dropdown-list{
+
+  .navbar__dropdown:hover .navbar__dropdown-list {
     display: block;
   }
 
   /* SecondNavbar */
 
-  .secondNavbar__alphabetList{
+  .secondNavbar__alphabetList {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -142,112 +190,96 @@
     font-size: 2rem;
     font-weight: bold;
   }
-  .secondNavbar__alphabetItem{
+
+  .secondNavbar__alphabetItem {
     background-color: rgba(255, 7, 7, 0.196);
     font-weight: bolder;
     color: white;
     font-size: 1.5rem;
-    padding:0 0.5rem;
+    padding: 0 0.5rem;
     width: 2.5rem;
     text-align: center;
   }
-  .secondNavbar__alphabetItem:hover{
+
+  .secondNavbar__alphabetItem:hover {
     background-color: rgb(255, 7, 7);
   }
 
   /* main  */
-  .main{
+  .main {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     flex-wrap: wrap;
     border-top: 1px solid rgb(0, 0, 0);
-    margin: 1rem 0 0 0; /* haut/droite/bas/gauche */
+    margin: 1rem 0 0 0;
+    /* haut/droite/bas/gauche */
     padding: 3rem;
     width: 75%;
   }
-  .main__carousel{
+
+  .main__carousel {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.157);
     height: 40rem;
     /* opacity: 0; */
-    margin-bottom:1rem ;
+    margin-bottom: 1rem;
     display: flex;
     position: relative;
   }
-  .main__btn{
-    cursor: pointer;
-    bottom: 10%;
-    left: 49%;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid black; /* La couleur de la flèche */
-    transform: rotate(90deg);  
-}
-  .main__btn:hover{
-    border-bottom: 20px solid rgb(255, 255, 255); /* La couleur de la flèche */
-  }
-  .main__btn:first-child{
-    transform: rotate(270deg);  
-}
-  .main__btn:last-child{
-    left: 51%;}
 
 
-  .main__aside{
+
+  .main__aside {
     background-color: #00000061;
     width: 40rem;
     height: 80rem;
   }
-  .main__section{
+
+  .main__section {
     background-color: #00000028;
     border-radius: 3rem;
     width: 40rem;
     height: 80rem;
     flex-grow: 0.97;
   }
- 
-  .main__img{
-    border: 1px solid green;
-    overflow: hidden;
-    display: flex;
-    /* width: 20%; */
-    top: 25%;
-}
-  .main__img>img{
-    width: 40rem;
-  }
-  .main__radio{
+
+/* revenir plus tard pour terminer  */
+
+/*  .slide {
+    display: none;
     position: absolute;
     top: 0;
-    display: none;
-}
-
-  .main__btnList{
-    display: flex;
-    justify-content: space-around;
-    width: 63%;
-    height: 10%;
-    position: absolute;
-    bottom: 42%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
   }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  .aaa{
+    position: absolute;
+    color: green;
+    z-index: 1; 
+  }
+
+  .slide:first-child,.slide:target {
+    display: block;
+  }
+
+  .slideshow a:nth-child(2):after {
+    content: '';
+    right: 10px;
+    transform: rotate(45deg);
+  } */
+
+
+
+
+
+
+
   /* footer */
-  .footer{
+  .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,7 +289,8 @@
     padding: 2rem 0;
     font-weight: bold;
   }
-  .footer__list{
+
+  .footer__list {
     display: flex;
     padding: 2.5rem 0 0 0;
     gap: 3rem;
@@ -266,6 +299,4 @@
 
 
 /* component : element reutilisable, bouton, formulaire. */
-@layer component {
-
-}
+@layer component {}
