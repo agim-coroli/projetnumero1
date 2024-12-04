@@ -215,13 +215,13 @@
     /* haut/droite/bas/gauche */
     padding: 3rem;
     width: 75%;
+    position: relative;
   }
 
   .main__carousel {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.157);
     height: 40rem;
-    /* opacity: 0; */
     margin-bottom: 1rem;
     display: flex;
     position: relative;
@@ -245,57 +245,11 @@
 
   /* revenir plus tard pour terminer  */
 
- 
-
-  .slide{
-    position: absolute;
-    display: none;
-    top: 20%;
-    left: 40%;
+  .carousel{
+    width: 30%;
+    top: 10%;
+    left: 36%;
   }
-
-  .slide:first-child{
-    display: block;
-  }
-
-  .slide:target{
-    display: block;
-  }
-
-  .slide>a:first-child{
-    position: absolute;
-    z-index: 1;
-    height: 99%;
-    width: 50%;
-    border: 1px solid red;
-  }
-  .slide>a:last-of-type{
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    height: 99%;
-    width: 50%;
-    border: 1px solid rgb(38, 0, 255);
-    initial-value: "";
-  }
-
-  .slide-1:target,
-  .slide-2:target,
-  .slide-3:target,
-  .slide-4:target,
-  .slide-5:target,
-  .slide-6:target,
-  .slide-7:target{
-    display: block;
-  }
-
-  .pagination{
-    position: absolute;
-    top: 75%;
-    font-size: 2rem;
-    left: 48%;
-  }
-
 
 
 
