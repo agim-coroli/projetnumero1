@@ -210,11 +210,12 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 1rem 0 0 0;
+    margin: 0 0 3rem 0;
     /* haut/droite/bas/gauche */
-    padding: 3rem;
     width: 75%;
     position: relative;
+
+    
   }
 
   .main__carousel {
@@ -245,19 +246,16 @@
     position: relative;
   }
   .main__carousel>img{
-    width: 25%; height: 60%;
+    width: 25%; 
+    height: 60%;
     top: 20%;
     left: 36%;
   }
   .main__carousel>*{
     position: absolute;
-    opacity: 0;
-  }
-  .main__carousel>:first-child{
-    opacity: 1;
   }
 
-  .main__carousel>:nth-child(5){
+  .main__carousel>:nth-child(17){
     right: 0 ; 
     top: 50%;
   }
@@ -272,6 +270,7 @@
   .button:last-child{
     top: 0;
   }
+
 
   /* footer */
   .footer {
