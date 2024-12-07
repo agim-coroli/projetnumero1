@@ -15,14 +15,16 @@ function update() {
     });
 }
 
-nextButton.addEventListener('click', function()  {
+
+nextButton.addEventListener('click', function () {
     currentIndex = (currentIndex + 1) % images.length
     update()
 })
 
-prevButton.addEventListener('click', function()  {
-    currentIndex = (currentIndex + 4) % images.length
+prevButton.addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; 
     update()
 })
+
 
 update()

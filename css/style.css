@@ -213,8 +213,6 @@
     /* haut/droite/bas/gauche */
     width: 75%;
     position: relative;
-
-    
   }
 
   .main__carousel {
@@ -228,55 +226,114 @@
 
   .main__aside {
     background-color: #00000061;
-    width: 40rem;
-    height: 80rem;
+    width: 30rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aside_inputs{
+    border: 1px solid black;
+    padding: 1rem;
+    width: 90%;
+    margin: 1rem;
+    background: rgba(0, 0, 0, 0.357);
+  }
+
+  .genre-selection{
+    width: 100%;
+    background-color: rgba(253, 253, 253, 0.362);
+  }
+
+  .genre-selection>option{
+    background-color: rgba(0, 0, 0, 0.687);
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .aside_inputs>label{
+    color: white;
   }
 
   .main__section {
     background-color: #00000028;
     border-radius: 3rem;
     width: 40rem;
-    height: 80rem;
+    padding: 5rem;
     flex-grow: 0.97;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
-  /* revenir plus tard pour terminer  */
-  .main__carousel{
-    position: relative;
+  .section__cards{
+    width: 20rem;
+    height: 30rem;
+    background-color: white;
+    margin: 0 0 2.5rem auto;
   }
-  .main__carousel>img{
-    width: 29%; 
-    height: 70%;
-    top: 15%;
-    left: 36%;
-    border: 10px solid rgba(128, 0, 0, 0.579);
 
+  .section__cards:hover{
+    border: 1px solid black;
+    filter: brightness(50%);
+    content: "adzdazdazdaz";
   }
-  .main__carousel>*{
+  .carousel__cards::after {
+    content: ""; /* Met le titre que tu veux ici */
+  }
+
+  .main__img{
     position: absolute;
-    
+    width: 38.5rem;
+    top: 10%;
+    left: 35.7%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 10px rgba(255, 0, 0, 0.653);
   }
 
-  .main__carousel>:nth-child(17){
-    right: 0 ; 
-    top: 50%;
-  }
   .button{
     position: absolute;
     font-size: 5rem;
-    top: 40%;
+    top: 83%;
   }
 
   .button:hover{
-    filter: blur(1px);
+    filter: blur(1.5px);
+    
   }
   .carousel__leftArrow{
-    left:32% ;
+    left:44% ;
+    top: 84.5%;
     transform: rotate(180deg);
   }
+
   .button:last-child{
-    right: 31%;
+    right: 43%;
   }
+
+  .section__alphabetList {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .section__alphabetItem{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 2.5rem;
+  }
+
+
+
 
 
   /* footer */
